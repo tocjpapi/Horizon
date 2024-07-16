@@ -72,7 +72,69 @@
     </div>
 
 
-    <div class="next"></div>
+
+    <div class="nextmini">
+      <div class="leftside"><p>Details</p></div>
+      
+      <div class="rightside">
+                <div class="hero__content">
+            <div class="left__container">
+                <p class="container__heading">
+                    <span class="heading__line">
+                        <span>unlock boundless creative</span>
+                    </span>
+
+                    <span class="heading__line">
+                        <span>potential with rebel's studio</span>
+                    </span>
+
+                    <span class="heading__line">
+                        <span>innovative solutions</span>
+                    </span>
+                  </p>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="next">
+
+    <div class="nextinner">
+     <img src="2.webp" alt="" srcset="">
+
+
+
+    </div>
+
+    </div>
+
+    <div class="nextmini">
+      <div class="leftside"><p>Features</p></div>
+      
+      <div class="rightside">
+                <div class="hero__content">
+            <div class="left__container">
+                <p class="container__heading">
+                    <span class="heading__line">
+                        <span>clean borderless design</span>
+                    </span>
+
+                    <span class="heading__line">
+                        <span>unleashing new emotions</span>
+                    </span>
+
+                    <span class="heading__line">
+                        <span>for brand identity</span>
+                    </span>
+                  </p>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -130,6 +192,40 @@ document.getElementById('nana').addEventListener('click', function() {
   config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
 });
 </script>
+
+
+<script>
+  Shery.imageEffect(".nextinner", {
+style: 3 /*OR 5 for different variant */,
+
+config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
+});
+</script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Select all elements with the class .container__heading
+  document.querySelectorAll('.container__heading').forEach(container => {
+    // Apply the GSAP animation to each container's heading lines
+    gsap.to(container.querySelectorAll('.heading__line span'), {
+      y: "0",
+      filter: "blur(0px)",
+      stagger: 0.1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: container,
+        start: "top 80%", // Trigger when top of container is 80% from the top of the viewport
+        toggleActions: "play none none none", // Play animation when entering the viewport
+      }
+    });
+  });
+</script>
+
     
 </body>
 </html>
