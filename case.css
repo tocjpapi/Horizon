@@ -336,6 +336,153 @@ body {
   object-fit: cover;
 }
 
+.next2{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.biginner{
+  height: calc(100vh - 11.7vh);
+  width: calc(100vw - 4vw);
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between
+}
+
+.inner1{
+  width: 40vw;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+.inner2{
+  width: 47vw;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image3{
+  height: 55vh;
+  width: 100%;
+  background: #000;
+}
+
+
+.image4{
+  position: absolute;
+  height: 90px;
+  width: 135px;
+  background: #000;
+  bottom: 10px;
+}
+
+.image1{
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  height: 40vh;
+  width: 30vh;
+  background: #000;
+}
+
+.image2{
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  height: 30vh;
+  width: 90%;
+  background: #000;
+}
+
+.image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.nono{
+  height: 80vh;
+}
+
+.ima img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.grandmaster{
+  height: 500px;
+  width: 700px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.oddblock2{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  background: #000;
+
+}
+
+
+.oddblock1{
+  position: absolute;
+  left: 0;
+  height: 300px;
+  width: 80%;
+  background: #000;
+  z-index: 999999;
+}
+
+.large{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blockbaby1{
+  height: 100%;
+  width: 69%;
+  background: #000;
+}
+
+.blockbaby2{
+  height: 380px;
+  width: 330px;
+  background: #000;
+}
+
+.jana img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
 @media (max-width:500px) {
   .left__container .container__heading .heading__line span {
     font-size: 20px;
@@ -386,5 +533,93 @@ body {
     margin-top: 10%;
   }
 
+
+  .grandmaster{
+    height: 400px;
+    width: 400px;
+  }
+
+  .oddblock2{
+    position: absolute;
+    right: 0;
+    height: 75%;
+    width: 180px;
+    background: #000;
+    margin-right: 20px;
+  }
   
+  
+  .oddblock1{
+    position: absolute;
+    left: 0;
+    height: 180px;
+    width: 72%;
+    margin-left: 20px;
+    background: #000;
+    z-index: 999999;
+  }
+  
+
+  .nuxt{
+    height: 50vh;
+  }
+
+  .nextinner{
+    height: calc(100% - 2vw);
+    width: calc(100vw - 31.7vw);
+    position: relative;
+    overflow: hidden;
+    background: #b3b3b3;
+  }
+
+  .rien{
+    height: 70vh;
+  }
+
+  .image3{
+    height: 55vw;
+    width: 100%;
+    background: #000;
+  }
+  
+  
+  .image4{
+    position: absolute;
+    height: 90px;
+    width: 135px;
+    background: #000;
+    bottom: 10px;
+  }
+  
+  .image1{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    height: 40vw;
+    width: 30vw;
+    background: #000;
+  }
+  
+  .image2{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    height: 30vw;
+    width: 90%;
+    background: #000;
+  }
+
+  .biginner{
+    height: calc(80vh - 11.7vh);
+    width: calc(100vw - 4vw);
+    position: relative;
+    overflow: hidden;
+  
+    display: flex;
+    justify-content: space-between
+  }
+  
+  
+
+
 }
