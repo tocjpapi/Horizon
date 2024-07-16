@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Helvetica-Neue';
+    src: url('./assets/font/HelveticaNeueLTPro-Md.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+:root {
+    --bg: #fff; 
+    --text:  #000;
+    --gutter-width: 2vw;
+    --column: 16;
+    --animation-primary: 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Helvetica-Neue';
+  }
+  
+
+body {
+  font-weight: 200;
+  font-size: medium;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh; 
+  overscroll-behavior: contain;  
+}
+
+#ios-scrolling {
+  -webkit-scroll-behavior: smooth;
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  behavior: smooth;
+  overflow-y: auto;
+}
+
+
+::-webkit-scrollbar{
+    width: 0;
+  }
+  
+  
+  ::selection{
+    background-color: #d8cabd;
+    color: #111;
+  }
+  
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--gutter-width) var(--gutter-width);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: var(--gutter-width);
+    opacity: 0;
+    animation: fadein 1.5s ease forwards;
+    z-index: 9999999999;
+  }
+
+  @keyframes fadein {
+
+    from{
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0px);
+    }
+    
+  }
+  
+  .navigation__logo {
+    grid-column-start: 9;
+  }
+  
+  .navigation__logo--link {
+    font-style: italic;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    line-height: 0.9;
+    font-family: "Libre Caslon Text", serif;
+    
+  }
+
+  .right{
+    position: absolute;
+    right:2vw ;
+    top: 2vw;
+    display: flex;
+    gap: 7px;
+
+  }
+
+
+  .left{
+    position: absolute;
+    left:2vw ;
+    top: 2vw;
+    width: 175px;
+    display: flex;
+    gap: 7px;
+  }
+  
+
+  .navigation p {
+    grid-column-start: 16;
+
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 0.9;
+    opacity: 1;
+
+  }
+
+  .menu{
+    cursor: pointer;
+  }
+
+  .menu::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    bottom: -40%;
+    left: 0;
+    background-color:#444;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+    transform-origin: right;
+  }
+
+
+  .intro{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .menu:hover::after {
+    visibility: visible;
+    transform: scaleX(0);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .title{
+    position: absolute;
+    top: 0;
+     height: 50vh;
+     width: fit-content;
+     display: flex;
+     align-items: center;
+     margin-left: 2vw;
+     opacity: 0.3;
+  }
+
+  .title p{
+    font-size: 130px;
+    filter: blur(5px);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: blurfadeup 1.5s 0.3s ease forwards
+  }
+
+
+  .title span{
+    font-family: "Libre Caslon Text", serif;
+    font-size: 130px;
+    font-style: italic;
+  }
+
+  .img{
+    height: 320px;
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    right: 2vw;
+  }
+
+  .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+
+  .bottomtext{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: fit-content;
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+
+  }
+
+  .othertext{
+
+    width: 370px;
+    filter: blur(5px);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: blurfadeups 1.5s 0.7s ease forwards
+  }
+
+
+  .titletxt{
+    filter: blur(5px);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: blurfadeup 1.5s 0.6s ease forwards
+  }
+
+  @keyframes blurfadeup {
+    from{
+        filter: blur(5px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes blurfadeups {
+    from{
+        filter: blur(5px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 0.3;
+  
+    }
+}
+
+.next{
+  height: 100vh;
+}

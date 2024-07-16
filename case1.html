@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case one</title>
+    <link rel="stylesheet" href="case.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
+  <link rel="shortcut icon" href="favi.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navigation"  style="position: fixed;">
+        <div class="navigation__logo">
+          <a style="font-weight: 600;" href="#" class="navigation__logo--link">Cj</a>
+        </div>
+
+        <div class="left">
+
+            <div class="link">
+            <p>Model,</p>
+            </div>
+
+            <div class="link">
+                <p>Design</p>
+                </div>
+        </div>
+
+
+
+        <div class="right">
+
+
+
+            
+
+      <div class="link menu">
+        <p>menu</p>
+    </div>
+
+
+    </div> 
+      </nav>
+
+
+
+<div class="intro">
+      <div class="title">
+        <p>Forms <span>- (01)</span></p>
+      </div>
+
+      <div class="img">
+        <img src="2.webp" alt="" srcset="">
+      </div>
+    </div>
+
+    <div class="bottomtext">
+        <div class="titletxt"><p>Lead Designer</p></div>
+
+        <div class="othertext">
+           <p>Employees don't really seem to collaborate with investors.
+            This is a solution made to foster the connection between
+            the two parties.</p>
+        </div>
+    </div>
+
+
+    <div class="next"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+<script>
+// Initialize Lenis
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smooth scrolling
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    smoothTouch: true,
+    touchMultiplier: 1,
+    infinite: false,
+});
+
+// Request animation frame loop for Lenis
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+document.getElementById('nana').addEventListener('click', function() {
+    const target = document.getElementById('nana');
+    lenis.scrollTo(target, {
+        offset: 0,
+        immediate: false,
+        duration: 1.6,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+    });
+});
+
+
+
+
+
+
+</script>
+
+<script>
+    Shery.imageEffect(".img", {
+  style: 3 /*OR 5 for different variant */,
+
+  config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
+});
+</script>
+    
+</body>
+</html>
