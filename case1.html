@@ -15,21 +15,23 @@
   />
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
   <link rel="shortcut icon" href="favi.png" type="image/x-icon">
+
+
 </head>
 <body>
     <nav class="navigation"  style="position: fixed;">
         <div class="navigation__logo">
-          <a style="font-weight: 600;" href="#" class="navigation__logo--link">Cj</a>
+          <a style="font-weight: 600;" href="index.html" class="navigation__logo--link">Cj</a>
         </div>
 
         <div class="left">
 
             <div class="link">
-            <p>Model,</p>
+            <p>Visual</p>
             </div>
 
             <div class="link">
-                <p>Design</p>
+                <p>Artist</p>
                 </div>
         </div>
 
@@ -56,7 +58,7 @@
         <p>Forms <span>- (01)</span></p>
       </div>
 
-      <div class="img">
+      <div class="img img1">
         <img src="2.webp" alt="" srcset="">
       </div>
     </div>
@@ -81,15 +83,15 @@
             <div class="left__container">
                 <p class="container__heading">
                     <span class="heading__line">
-                        <span>unlock boundless creative</span>
+                        <span>bringing an idea</span>
                     </span>
 
                     <span class="heading__line">
-                        <span>potential with rebel's studio</span>
+                        <span>to life with blender</span>
                     </span>
 
                     <span class="heading__line">
-                        <span>innovative solutions</span>
+                        <span>and animation</span>
                     </span>
                   </p>
 
@@ -214,14 +216,58 @@
         <div class="blockbaby2 jana">
           <img src="y.webp" alt="" srcset="">
         </div>
+
+        
+        <div class="blockbaby3">
+          <img src="y.webp" alt="" srcset="">
+        </div>
+
+
       </div>
       </div>
     </div>
 
     
 
+    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <div class="end">
+      <div class="bigtext"><p>Current <span>- (02)</span></p></div>
+<div class="biggest">
+      <div class="into"></div>
+      <div class="intos">
+        <div class="img2">
+          <img src="3.webp" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="menuover" id="menuOverlay">
+      <div class="menus" id="menuContent">
+        <div class="items">
+          <div class="item first" style="opacity: 1;"><a href="index.html">work</a></div>
+          <div class="item second" style="opacity: 0.3;"><a href="about.html">about</a></div>
+          <div class="item third" style="opacity: 0.3;"><a href="">contact</a></div>
+         </div>
+    
+    
+         <div class="job">
+          <img class="first" src="rien.webp" alt="" style="opacity: 1;">
+          <img class="second" src="2.webp" alt="" style="opacity: 0;">
+          <img class="third" src="yoski.webp" alt="" style="opacity: 0;">
+         </div>
+    
+         <div class="dot"></div>
+      </div>
+    </div>
+    
+
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
@@ -270,49 +316,71 @@ document.getElementById('nana').addEventListener('click', function() {
 </script>
 
 <script>
+    function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
+
+  function isMobileOrTablet() {
+    return isTouchDevice() || window.innerWidth <= 1024; 
+  }
+
+
+  if (!isMobileOrTablet()) {
     Shery.imageEffect(".img", {
   style: 3 /*OR 5 for different variant */,
 
-  config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
+  config: {"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
+ 
 });
+  }
 </script>
 
 
 <script>
+    function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
+
+  function isMobileOrTablet() {
+    return isTouchDevice() || window.innerWidth <= 1024; 
+  }
+
+
+  if (!isMobileOrTablet()) {
   Shery.imageEffect(".nextinner", {
 style: 3 /*OR 5 for different variant */,
 
 config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
 
 });
-</script>
 
-<script>
-  Shery.imageEffect(".image", {
-style: 3 /*OR 5 for different variant */,
-
-config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
-
-});
+  }
 </script>
 
 
-<script>
-  Shery.imageEffect(".oddblock2", {
-style: 3 /*OR 5 for different variant */,
 
-config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
-
-});
-</script>
 
 <script>
+    function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
+
+  function isMobileOrTablet() {
+    return isTouchDevice() || window.innerWidth <= 1024; 
+  }
+
+
+  if (!isMobileOrTablet()) {
   Shery.imageEffect(".jana", {
 style: 3 /*OR 5 for different variant */,
 
 config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
 
 });
+  }
 </script>
 
 
@@ -382,7 +450,7 @@ config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.
 
   // Create a GSAP animation for the .oddblock1 element
   gsap.to(".image2", {
-    yPercent: 23, // Adjust the value for different parallax effect
+    yPercent: 33, // Adjust the value for different parallax effect
     ease: "none",
     scrollTrigger: {
       trigger: ".image2",
@@ -399,7 +467,7 @@ config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.
 
   // Create a GSAP animation for the .oddblock1 element
   gsap.to(".image3", {
-    yPercent: -23, // Adjust the value for different parallax effect
+    yPercent: -33, // Adjust the value for different parallax effect
     ease: "none",
     scrollTrigger: {
       trigger: ".image3",
@@ -410,6 +478,137 @@ config:{"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.
     }
   });
 </script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Create a GSAP animation for the .oddblock1 element
+  gsap.to(".bigtext", {
+    opacity: 0,
+    filter: "blur(5px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".bigtext",
+      start: "top center", // When the top of the container hits the bottom of the viewport
+      end: "bottom top", // When the top of the container hits the bottom of the viewport
+ // When the bottom of the container hits the top of the viewport
+      scrub: true, // Smooth scrubbing
+    }
+  });
+</script>
+
+<script>
+    function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
+
+  function isMobileOrTablet() {
+    return isTouchDevice() || window.innerWidth <= 1024; 
+  }
+
+
+  if (!isMobileOrTablet()) {
+  Shery.imageEffect(".img2", {
+    style: 3 /*OR 5 for different variant */,
+    config: {"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
+ 
+  });
+}
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const items = document.querySelectorAll('.items .item');
+    const firstItem = document.querySelector('.items .first');
+    const itemsContainer = document.querySelector('.items');
+  
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        items.forEach(el => el.style.opacity = '0.3');
+        item.style.opacity = '1';
+      });
+    });
+  
+    itemsContainer.addEventListener('mouseleave', () => {
+      items.forEach(el => el.style.opacity = '0.3');
+      firstItem.style.opacity = '1';
+    });
+  });
+  
+  </script>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuContent = document.getElementById('menuContent');
+    const menuItems = document.querySelectorAll('.item');
+    const body = document.body;
+    let scrollPosition = 0;
+  
+    function closeMenu() {
+      menuOverlay.classList.remove('show');
+      menuContent.classList.remove('show');
+      body.classList.remove('no-scroll');
+      body.style.top = '';
+      window.scrollTo(0, scrollPosition);
+    }
+  
+    menuButton.addEventListener('click', function() {
+      if (menuOverlay.classList.contains('show')) {
+        closeMenu();
+      } else {
+        scrollPosition = window.pageYOffset;
+        menuOverlay.classList.add('show');
+        menuContent.classList.add('show');
+        body.classList.add('no-scroll');
+        body.style.top = `-${scrollPosition}px`;
+      }
+    });
+  
+    menuOverlay.addEventListener('click', function(event) {
+      if (event.target === menuOverlay) {
+        closeMenu();
+      }
+    });
+  
+    menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+  });
+  
+  
+  
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll('.item');
+      const images = document.querySelectorAll('.job img');
+      const defaultImage = document.querySelector('.job .first');
+  
+      items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          images.forEach(img => img.style.opacity = '0');
+          const imgToShow = document.querySelector(`.job .${item.classList[1]}`);
+          imgToShow.style.opacity = '1';
+        });
+  
+        item.addEventListener('mouseleave', () => {
+          images.forEach(img => img.style.opacity = '0');
+          defaultImage.style.opacity = '1';
+        });
+      });
+    });
+  </script>
+
+
+
+
+
 
 
     

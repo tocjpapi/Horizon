@@ -27,6 +27,7 @@
 }
 
 
+
 * {
     padding: 0;
     margin: 0;
@@ -80,6 +81,7 @@ body {
     grid-template-columns: repeat(16, 1fr);
     gap: var(--gutter-width);
     opacity: 0;
+    z-index: 9999999999;
     animation: fadein 1.5s 0.5s ease forwards;
   }
 
@@ -164,7 +166,7 @@ body {
     transform: scaleX(0);
   }
 
-.bigtext{
+.bigtex{
     height: 100%;
     width: 100%;
     position: fixed;
@@ -172,10 +174,10 @@ body {
     align-items: center;
     pointer-events: none;
     justify-content: center;
-    z-index: -99999;
+    z-index: 999998;
 }
 
-.bigtext p{
+.bigtex p{
     font-size: 120px;
 }
 
@@ -257,12 +259,23 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    z-index: 9999999;
-    filter: blur(5px);
-    transform: translateY(20px);
-    opacity: 0;
-    animation: blurfadeup 1.5s 0.5s ease forwards
   }
+
+
+
+  @keyframes blurfadeup2 {
+    from{
+        filter: blur(5px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 0.3;
+    }
+}
+
 
   .img{
     height: 320px;
@@ -272,7 +285,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transform: translateY(20px);
+    animation: blurfadeup3 1.5s 5s ease forwards
   }
+  @keyframes blurfadeup3 {
+    from{
+
+        transform: translateY(20px);
+
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+
+    }
+}
+
 
 
   .taller{
@@ -287,10 +316,9 @@ body {
 
   .img img{
     position: absolute;
-    height: 200%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    top: -100%;
   }
 
   .img{
@@ -302,13 +330,34 @@ body {
     position: sticky;
     width: 50%;
     top: 50%;
-    opacity: 0.3;
-    
+    filter: blur(5px);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: blurfadeup4 1.5s 5.3s ease forwards
   }
+
+  @keyframes blurfadeup4 {
+    from{
+        filter: blur(5px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 0.3;
+    }
+}
+
 
   .sticklefttext p{
     font-family: "Libre Caslon Text", serif;
   }
+
+  #yeah {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
+}
 
   .tex p {
 
@@ -336,7 +385,144 @@ body {
 }
 
 
-@media (max-width:500px) {
+.nextmini{
+  overflow: hidden;
+  height: 80vh;
+  width: calc(100vw - 2vw);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftside{
+  width: 40vw;
+  margin-left: 2vw;
+  opacity: 0.8;
+}
+
+.rightside{
+  width: 60vw;
+}
+
+.coverove{
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  pointer-events: none;
+  z-index: 99999;
+  animation: fadeout 2s ease forwards;
+  backdrop-filter: blur(5px);
+}
+
+.menuover {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #00000043;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Start hidden */
+  transition: opacity 1s ease, visibility 1s ease;
+  z-index: 999999999;
+}
+
+.menuover.show {
+  visibility: visible; /* Show when toggled */
+  opacity: 1;
+}
+
+.menus {
+  height: 50vh;
+  width: 100%;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.7s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job img {
+  transition: opacity 0.3s, scale 0.7s;
+}
+
+.job:hover img{
+  scale: 1.05;
+}
+
+.menus.show {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+@keyframes fadeout {
+  to{
+    opacity: 0;
+  }
+}
+
+.items{
+  position: absolute;
+  left: 2vw;
+  opacity: 0.9;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  
+.item a{
+  font-size: 35px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.items .item {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.items .item:hover {
+  opacity: 1 !important;
+}
+
+
+.job{
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  right: 2vw;
+  background: #777;
+  overflow: hidden;
+}
+
+.job img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+
+}
+
+body.no-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
+#nana{
+  cursor: pointer;
+}
+
+
+
+@media (max-width:600px) {
   
 .bigtext p{
   font-size: 80px;
@@ -378,5 +564,37 @@ body {
 }
 
 
+.job{
+  height: 100px;
+  width: 150px;
+  position: absolute;
+  right: 2vw;
+  background: #777;
+  overflow: hidden;
 }
+
+.items{
+  position: absolute;
+  left: 3vh;
+  opacity: 0.9;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+}
+
+
+
+@media (max-width: 1180px) and (min-height: 820px) {
+
+
+  .bottom{
+    height: 7vh;
+  }
+}
+
+
 

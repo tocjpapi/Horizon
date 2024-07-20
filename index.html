@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fixed</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Treasure Design</title>
+    <link rel="stylesheet" href="style-new.css">
     <link rel="shortcut icon" href="favi.png" type="image/x-icon">
     <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -15,47 +15,57 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
+
+
+
 </head>
-<body>
-    
-
-    <nav class="navigation"  style="position: fixed;">
-        <div class="navigation__logo">
-          <a style="font-weight: 600;" href="#" class="navigation__logo--link">Cj</a>
-        </div>
-
-        <div class="left">
-
-            <div class="link">
-            <p>Model,</p>
-            </div>
-
-            <div class="link2">
-                <p>Design</p>
-                </div>
-        </div>
 
 
+<body data-barba="wrapper">
+  <div class="cursor">
+    <p id="name"></span></p>
+</div>
 
-        <div class="right">
+  <nav class="navigation"  style="position: fixed;">
+      <div class="navigation__logo">
+        <a style="font-weight: 600;" href="index.html" class="navigation__logo--link">Cj</a>
+      </div>
 
+      <div class="left">
 
+          <div class="link">
+          <p>Visual</p>
+          </div>
 
-            
-
-      <div class="link menu">
-        <p>menu</p>
-    </div>
-
-
-    </div> 
-      </nav>
+          <div class="link">
+              <p>Artist</p>
+              </div>
+      </div>
 
 
 
-      <div class="bigtext" style="opacity: 0.3;">
+      <div class="right">
+
+
+
+          
+
+    <div class="link menu">
+      <p>menu</p>
+  </div>
+
+
+  </div> 
+    </nav>
+
+
+    <main data-barba="container" data-barba-namespace="home">
+
+
+
+      <div class="bigtex" style="opacity: 0.3;">
         <div class="tex">
-        <p >Treasure</p>
+        <p id="yeah">Ńdá</p>
     </div>
       </div>
 
@@ -75,20 +85,47 @@
 
       <div class="scroller">
 
+ 
+
         <div class="stickylefttext" id="nana" style="cursor: pointer;"><p>work</p></div>
 
+        <div class="coverove" id="coverove"></div>
+        <div class="img tall img1" id="img1" onclick="window.location.href='case1.html'"><img src="2.webp" alt="" srcset=""></div>
+        <div class="img short img2" id="img2"><img src="3.webp" alt="" srcset=""></div>
+        <div class="img taller img3" id="img3"><img src="4.webp" alt="" srcset=""></div>
+        <div class="img short img4" id="img4"><img src="5.webp" alt="" srcset=""></div>
+        <div class="img tall img5" id="img5"><img src="7.webp" alt="" srcset=""></div>
+        <div class="img short img6" id="img6"><img src="y.webp" alt="" srcset=""></div>
         
-        <div class="img tall" id="img1"><img src="2.webp" alt="" srcset=""></div>
-        <div class="img short" id="img2"><img src="3.webp" alt="" srcset=""></div>
-        <div class="img taller" id="img3"><img src="4.webp" alt="" srcset=""></div>
-        <div class="img short" id="img4"><img src="5.webp" alt="" srcset=""></div>
-        <div class="img tall" id="img5"><img src="7.webp" alt="" srcset=""></div>
-        <div class="img short" id="img6"><img src="y.webp" alt="" srcset=""></div>
 
+
+  
 
     </div>
 
-<div class="scrollmetre" style="position: fixed; right: 2vw; bottom: 2vw; opacity: 0.3; font-size: 14px;">scroll <span id="percent"></span></div>
+<div class="scrollmetre" id="nana"  style="position: fixed; right: 2vw; bottom: 2vw; opacity: 0.3; font-size: 14px;">scroll <span id="percent"></span></div>
+
+
+<div class="menuover" id="menuOverlay">
+  <div class="menus" id="menuContent">
+    <div class="items">
+      <div class="item first" style="opacity: 1;"><a href="index.html">work</a></div>
+      <div class="item second" style="opacity: 0.3;"><a href="about.html">about</a></div>
+      <div class="item third" style="opacity: 0.3;"><a href="">contact</a></div>
+     </div>
+
+
+     <div class="job">
+      <img class="first" src="rien.webp" alt="" style="opacity: 1;">
+      <img class="second" src="2.webp" alt="" style="opacity: 0;">
+      <img class="third" src="yoski.webp" alt="" style="opacity: 0;">
+     </div>
+
+     <div class="dot"></div>
+  </div>
+</div>
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -100,74 +137,73 @@
 <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          var cursor = $(".cursor");
+          var posX = 0;
+          var posY = 0;
+          var mouseX = 0;
+          var mouseY = 0;
+          var lag = 0.1; // Adjust the lag factor (0.1 is a starting point)
+      
+          $(document).on("mousemove", function(e) {
+              mouseX = e.clientX;
+              mouseY = e.clientY;
+          });
+      
+          function updateCursorPosition() {
+              var dx = mouseX - posX;
+              var dy = mouseY - posY;
+              posX += dx * lag;
+              posY += dy * lag;
+              cursor.css({
+                  left: posX + "px",
+                  top: posY + "px"
+              });
+              requestAnimationFrame(updateCursorPosition);
+          }
+      
+          updateCursorPosition();
+      
+          $(".img").on("mouseenter", function() {
+              cursor.addClass("active");
+          });
+      
+          $(".img").on("mouseleave", function() {
+              cursor.removeClass("active");
+          });
+      });
+      
+      </script>
+
 <script>
-// Initialize Lenis
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smooth scrolling
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: true,
-    touchMultiplier: 1,
-    infinite: false,
-});
+  // JavaScript to handle hover events and change the content
+  document.querySelector('.img1').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Forms <span class="just">- (01)</span>';
+  });
 
-// Request animation frame loop for Lenis
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
+  document.querySelector('.img2').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Current <span class="just">- (02)</span>';
+  });
 
-requestAnimationFrame(raf);
+  document.querySelector('.img3').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Borila <span class="just">- (03)</span>';
+  });
 
+  document.querySelector('.img4').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Book <span class="just">- (04)</span>';
+  });
 
-document.getElementById('nana').addEventListener('click', function() {
-    const target = document.getElementById('nana');
-    lenis.scrollTo(target, {
-        offset: 0,
-        immediate: false,
-        duration: 1.6,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
-    });
-});
+  document.querySelector('.img5').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Ring <span class="just">- (05)</span>';
+  });
 
-
-
-
-
-
-</script>
-
-<script>
-    document.addEventListener('scroll', function() {
-        const projects = document.querySelectorAll('.img img');
-        let scrollPosition = window.pageYOffset;
-        
-        projects.forEach(project => {
-            let speed = 0.1; 
-            project.style.transform = `translateY(${scrollPosition * speed}px)`;
-        });
-    });
-</script>
-<script>
-  document.addEventListener('scroll', () => {
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const currentScroll = window.scrollY;
-      const opacity = 0.3 - 2 * (currentScroll / maxScroll); // Adjust the multiplier to make it faster
-      document.querySelector('.bigtext').style.opacity = opacity > 0 ? opacity : 0;
+  document.querySelector('.img6').addEventListener('mouseover', () => {
+      document.querySelector('#name').innerHTML = 'Perfume <span class="just">- (06)</span>';
   });
 </script>
-
-
-<script>
-  Shery.imageEffect(".img", {
-    style: 3 /*OR 5 for different variant */,
-    config: {"uFrequencyX":{"value":20.61,"range":[0,100]},"uFrequencyY":{"value":15.27,"range":[0,100]},"uFrequencyZ":{"value":9.16,"range":[0,100]},"geoVertex":{"range":[1,64],"value":20.24},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.9375},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.12,"range":[1,5]},"scrollType":{"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":0.7,"range":[-1,1]}}
- 
-  });
-  </script>
-  
+    <script src="app.js"></script>
 
 
     
