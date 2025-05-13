@@ -7,6 +7,9 @@
 
 
 
+  .left{cursor: pointer;}
+
+
 :root {
     --bg: #fff; 
     --text:  #000;

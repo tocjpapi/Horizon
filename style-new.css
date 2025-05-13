@@ -757,7 +757,7 @@ body {
   }
   
   .scroller{
-    height: 300vh;
+    height: 250vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -790,7 +790,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     transform: translateY(20px);
     animation: blurfadeup3 1.5s 5s ease forwards
   }
@@ -932,7 +931,7 @@ body {
   }
   
 
-  @media (max-width:600px) {
+  @media (max-width:900px) {
     .job{
       height: 100px;
       width: 150px;
@@ -1145,7 +1144,7 @@ body {
   }
   
   .bottom{
-    height: 78vh;
+    height: 58vh;
   }
 
   .scrollmetre{
@@ -1155,60 +1154,7 @@ body {
   
   }
 
-  @media (max-width: 1180px) and (min-height: 820px) {
-
-    
-      
-  .lefttext{
-    width: 38vw;
+  .left{
+    cursor: pointer;
   }
 
-  .left__container .container__heading .heading__line span {
-    font-size: 35px;
-  }
-
-  .leftsides{
-    width: 100vw;
-  }
-
-  .rightsides{
-    display: none;
-  }
-
-
-  .bext{
-    height: 30vh;
-    display: none;
-  }
-
-  .blockbaby1{
-    display: none;
-  }
-  
-  .blockbaby2{
-    display: none;
-  }
-
-  
-  .hug{
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @keyframes blurfadeup2 {
-    from{
-        filter: blur(5px);
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to{
-        filter: blur(0px);
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-
-  }

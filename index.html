@@ -31,7 +31,7 @@
         <a style="font-weight: 600;" href="index.html" class="navigation__logo--link">Cj</a>
       </div>
 
-      <div class="left">
+      <div class="left" onclick="window.location.href='index.html'">
 
           <div class="link">
           <p>Visual</p>
@@ -91,11 +91,11 @@
 
         <div class="coverove" id="coverove"></div>
         <div class="img tall img1" id="img1" onclick="window.location.href='case1.html'"><img src="2.webp" alt="" srcset=""></div>
-        <div class="img short img2" id="img2"><img src="3.webp" alt="" srcset=""></div>
-        <div class="img taller img3" id="img3"><img src="4.webp" alt="" srcset=""></div>
-        <div class="img short img4" id="img4"><img src="5.webp" alt="" srcset=""></div>
-        <div class="img tall img5" id="img5"><img src="7.webp" alt="" srcset=""></div>
-        <div class="img short img6" id="img6"><img src="y.webp" alt="" srcset=""></div>
+        <div class="img short img2" id="img2" onclick="window.location.href='case1.html'"><img src="3.webp" alt="" srcset=""></div>
+        <div class="img taller img3" id="img3" onclick="window.location.href='case1.html'"><img src="4.webp" alt="" srcset=""></div>
+        <div class="img short img4" id="img4" onclick="window.location.href='case1.html'"><img src="5.webp" alt="" srcset=""></div>
+        <div class="img tall img5" id="img5" onclick="window.location.href='case1.html'"><img src="7.webp" alt="" srcset=""></div>
+        <div class="img short img6" id="img6" onclick="window.location.href='case1.html'"><img src="y.webp" alt="" srcset=""></div>
         
 
 
@@ -145,7 +145,7 @@
           var posY = 0;
           var mouseX = 0;
           var mouseY = 0;
-          var lag = 0.1; // Adjust the lag factor (0.1 is a starting point)
+          var lag = 0.3; // Adjust the lag factor (0.1 is a starting point)
       
           $(document).on("mousemove", function(e) {
               mouseX = e.clientX;
